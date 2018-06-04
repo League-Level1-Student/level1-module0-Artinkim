@@ -22,31 +22,46 @@ public class PhotoQuiz {
                 quizWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   // This will make sure the program exits when you close the window
 
 		// 1. find an image on the internet, and put its URL in a String variable (from your browser, right click on the image, and select “Copy Image Address”)
-String image = "https://www.w3schools.com/w3css/w3css_images.asp";
+String image = "https://www.bhphotovideo.com/images/images500x500/LEE_Filters_115R_Peacock_Blue_Color_Effect_688218.jpg";
 		// 2. create a variable of type "Component" that will hold your image
 Component h;
 		// 3. use the "createImage()" method below to initialize your Component
 h = createImage(image);
 		// 4. add the image to the quiz window
-
+quizWindow.add(h);
 		// 5. call the pack() method on the quiz window
-
+quizWindow.pack();
 		// 6. ask a question that relates to the image
-
+String q = JOptionPane.showInputDialog("What color do you see");
 		// 7. print "CORRECT" if the user gave the right answer
-
+if(q.equals("blue"))
+{
+System.out.println("Correct");	
+}
+else
+{
+System.out.println("Incorrect");
+}
 		// 8. print "INCORRECT" if the answer is wrong
 
 		// 9. remove the component from the quiz window (you may not see the effect of this until step 12)
-
+quizWindow.remove(h);
 		// 10. find another image and create it (might take more than one line of code)
-
+h = createImage("https://stoffe.kawaiifabric.com/images/product_images/large_img/solid-red-fabric-Robert-Kaufman-USA-Red-179485-1.JPG");
 		// 11. add the second image to the quiz window
-
+quizWindow.add(h);
 		// 12. pack the quiz window
-
+quizWindow.pack();
 		// 13. ask another question
-
+q = JOptionPane.showInputDialog("What color do you see");
+if(q.equals("red"))
+{
+System.out.println("Correct");	
+}
+else
+{
+System.out.println("Incorrect");
+}
 		// 14+ check answer, say if correct or incorrect, etc.
 
 	}
